@@ -73,7 +73,7 @@ const ScoreCard: React.FC<ScoreCardProps> = ({ quizResult, questions, name }) =>
                     </Link>
 
                     {/* LinkedIn Icon */}
-                    <Link href="https://github.com/KamranYT" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://www.linkedin.com/in/muhammad-kamran-916b752b4/" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin
                             size={40}
                             style={{
