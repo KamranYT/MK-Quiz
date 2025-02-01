@@ -2,224 +2,245 @@ export const quiz = {
     questions: [
         {
             id: 1,
-            question: 'What is the primary feature of Next.js that differentiates it from a standard React app?',
-            answers: [
-                'It provides a virtual DOM.',
-                'It enables server-side rendering (SSR).',
-                'It uses TypeScript by default.',
-                'It doesn\'t support client-side routing.'
-            ],
-            correctAnswer: 'It enables server-side rendering (SSR).'
+            question: 'What is the default file extension for Next.js pages?',
+            answers: ['.html', '.js', '.tsx or .jsx', '.php'],
+            correctAnswer: '.tsx or .jsx',
         },
         {
             id: 2,
-            question: 'Which of the following is a feature provided by Next.js for optimizing performance and development?',
-            answers: [
-                'Built-in CSS support',
-                'API Routes',
-                'Static Site Generation (SSG)',
-                'All of the above'
-            ],
-            correctAnswer: 'All of the above'
+            question: 'How does Next.js determine which page to render for a given route?',
+            answers: ['By reading a routes.js file', 'By matching files inside the pages directory', 'By manually defining all routes in next.config.js', 'By using Express.js routing'],
+            correctAnswer: 'By matching files inside the pages directory',
         },
         {
             id: 3,
-            question: 'In Next.js, which function is used to fetch data at build time for Static Site Generation (SSG)?',
-            answers: [
-                'getServerSideProps',
-                'getInitialProps',
-                'getStaticProps',
-                'getStaticPaths'
-            ],
-            correctAnswer: 'getStaticProps'
+            question: 'What is the purpose of [id].tsx in the pages directory?',
+            answers: ['It defines a dynamic route', 'It creates a middleware function', 'It defines a static route', 'It sets up API routes'],
+            correctAnswer: 'It defines a dynamic route',
         },
         {
             id: 4,
-            question: 'Which of the following methods is used in Next.js to define dynamic routes?',
-            answers: [
-                'Using query strings',
-                'Using folders with square brackets in the `pages` directory',
-                'Using the `Router` component',
-                'Using a special configuration file'
-            ],
-            correctAnswer: 'Using folders with square brackets in the `pages` directory'
+            question: 'What happens if a catch-all route [...slug].tsx is used?',
+            answers: ['It only works with one URL segment', 'It allows multiple segments in the URL', 'It requires getServerSideProps', 'It cannot be used with API routes'],
+            correctAnswer: 'It allows multiple segments in the URL',
         },
         {
             id: 5,
-            question: 'What is the purpose of the `getServerSideProps` function in Next.js?',
-            answers: [
-                'To fetch data at build time',
-                'To fetch data on the client side',
-                'To fetch data on each request at runtime',
-                'To prefetch links for faster navigation'
-            ],
-            correctAnswer: 'To fetch data on each request at runtime'
+            question: 'Which data-fetching method is best for fetching user-specific data?',
+            answers: ['getStaticProps', 'getServerSideProps', 'getInitialProps', 'fetch inside useEffect'],
+            correctAnswer: 'getServerSideProps',
         },
         {
             id: 6,
-            question: 'Which file is used in Next.js to customize the default HTML structure of your application?',
-            answers: [
-                '_app.js',
-                '_document.js',
-                'index.js',
-                '_html.js'
-            ],
-            correctAnswer: '_document.js'
+            question: 'What happens when you export getStaticProps from a page?',
+            answers: ['The page is rendered dynamically', 'The page is pre-rendered at build time', 'It runs every time a user visits the page', 'It fetches data client-side'],
+            correctAnswer: 'The page is pre-rendered at build time',
         },
         {
             id: 7,
-            question: 'Which of the following is true about API routes in Next.js?',
-            answers: [
-                'They are defined in the `api` directory under `pages`.',
-                'They require an external server to function.',
-                'They only work with POST requests.',
-                'They do not support server-side code.'
-            ],
-            correctAnswer: 'They are defined in the `api` directory under `pages`.'
+            question: 'Which function enables ISR in Next.js?',
+            answers: ['getStaticProps with revalidate', 'getServerSideProps', 'useEffect', 'getInitialProps'],
+            correctAnswer: 'getStaticProps with revalidate',
         },
         {
             id: 8,
-            question: 'Which command is used to start a Next.js development server?',
-            answers: [
-                'next run',
-                'next start',
-                'next dev',
-                'next build'
-            ],
-            correctAnswer: 'next dev'
+            question: 'What does revalidate: 10 mean in ISR?',
+            answers: ['The page refreshes every 10 seconds', 'The static page is updated after 10 seconds', 'Data is refetched every 10 seconds', 'The page only updates after deployment'],
+            correctAnswer: 'The static page is updated after 10 seconds',
         },
         {
             id: 9,
-            question: 'What is the purpose of the `next/link` component?',
-            answers: [
-                'To add animations to navigation',
-                'To link to external websites',
-                'To enable client-side navigation between pages',
-                'To fetch data from an API'
-            ],
-            correctAnswer: 'To enable client-side navigation between pages'
+            question: 'What is the default caching behavior of SWR?',
+            answers: ['No caching', 'Stale-while-revalidate', 'Cache forever', 'Always fetch fresh data'],
+            correctAnswer: 'Stale-while-revalidate',
         },
         {
             id: 10,
-            question: 'Which feature allows Next.js to automatically optimize images?',
-            answers: [
-                'next/image',
-                'next/optimize',
-                'next/media',
-                'next/auto-img'
-            ],
-            correctAnswer: 'next/image'
+            question: 'Which library is best for real-time data fetching in Next.js?',
+            answers: ['React Query', 'SWR', 'Both', 'Redux'],
+            correctAnswer: 'Both',
         },
         {
             id: 11,
-            question: 'In Next.js, what is the default behavior of pages inside the `pages` directory?',
-            answers: [
-                'They are treated as server-side rendered pages.',
-                'They are ignored unless manually imported.',
-                'They are automatically routed based on their file name.',
-                'They must be explicitly configured in a routing file.'
-            ],
-            correctAnswer: 'They are automatically routed based on their file name.'
+            question: 'What is a common use case for Next.js Middleware?',
+            answers: ['Protecting routes', 'Styling components', 'Fetching API data', 'Managing state'],
+            correctAnswer: 'Protecting routes',
         },
         {
             id: 12,
-            question: 'Which function in Next.js is used to pre-render pages with data during build time and generate paths dynamically?',
-            answers: [
-                'getServerSideProps',
-                'getInitialProps',
-                'getStaticProps',
-                'getStaticPaths'
-            ],
-            correctAnswer: 'getStaticPaths'
+            question: 'Where is middleware executed in Next.js?',
+            answers: ['On the client-side', 'Before request processing', 'After the response is sent', 'Inside getServerSideProps'],
+            correctAnswer: 'Before request processing',
+
         },
         {
             id: 13,
-            question: 'What command is used to build a Next.js application for production?',
-            answers: [
-                'next build',
-                'next run',
-                'next start',
-                'next deploy'
-            ],
-            correctAnswer: 'next build'
+            question: 'What are the benefits of using <Image> over <img> in Next.js?',  
+            answers: ['Lazy loading', 'Smaller file sizes', 'Automatic resizing', 'All of the above'],
+            correctAnswer: 'All of the above',
         },
         {
             id: 14,
-            question: 'Which of the following best describes the `useRouter` hook in Next.js?',
-            answers: [
-                'It fetches data from the API.',
-                'It provides access to the router object inside functional components.',
-                'It manages application state.',
-                'It is used to handle server-side rendering.'
-            ],
-            correctAnswer: 'It provides access to the router object inside functional components.'
-        },
+            question: 'What file formats does Next.js image optimization support?',
+            answers: ['JPEG, PNG', 'WebP, AVIF', 'All common formats', 'Only JPEG'],
+            correctAnswer: 'All common formats',
+        }, 
         {
             id: 15,
-            question: 'What is the purpose of the `next/head` component?',
-            answers: [
-                'To manage application-wide styles',
-                'To inject meta tags and other elements into the `<head>` of the document',
-                'To handle authentication',
-                'To set up server-side API routes'
-            ],
-            correctAnswer: 'To inject meta tags and other elements into the `<head>` of the document'
+            question: 'When is a static site updated in Next.js?',
+            answers: ['On every request', 'Only on a new deployment', 'Every minute', 'When the user refreshes'],
+            correctAnswer: 'Only on a new deployment',
         },
         {
-            id: 16,
-            question: 'Which of the following commands is used to start a Next.js application in production mode?',
-            answers: [
-                'next run',
-                'next prod',
-                'next start',
-                'next deploy'
-            ],
-            correctAnswer: 'next start'
+            id: 16, 
+            question: 'What is the main benefit of SSG?',
+            answers: ['Faster page load', 'Dynamic content', 'Always up-to-date data', 'Requires a backend'],
+            correctAnswer: 'Faster page load',
         },
         {
             id: 17,
-            question: 'In Next.js, what does the `next.config.js` file do?',
-            answers: [
-                'It is used to configure database connections.',
-                'It allows customization of the Next.js server and build process.',
-                'It manages application state.',
-                'It handles CSS styling for the app.'
-            ],
-            correctAnswer: 'It allows customization of the Next.js server and build process.'
+            question: 'What is a key advantage of Server Components?',
+            answers: ['Reduced client-side JavaScript', 'Faster hydration', 'Works with useState', 'Runs in the browser'],
+            correctAnswer: 'Reduced client-side JavaScript',
         },
         {
             id: 18,
-            question: 'Which of the following methods in Next.js allows for client-side navigation between routes?',
-            answers: [
-                'window.location.href',
-                'Router.push',
-                'Link.move',
-                'navigate'
-            ],
-            correctAnswer: 'Router.push'
+            question: 'Server Components can be combined with…',
+            answers: ['Client Components', 'Only API routes', 'Only static pages', 'Redux'],
+            correctAnswer: 'Client Components',
         },
         {
             id: 19,
-            question: 'What type of data fetching is most suitable for pages that need to show real-time data updates in Next.js?',
-            answers: [
-                'Static Site Generation (SSG)',
-                'Incremental Static Regeneration (ISR)',
-                'Client-side Rendering (CSR)',
-                'Server-side Rendering (SSR)'
-            ],
-            correctAnswer: 'Server-side Rendering (SSR)'
+            question: 'Which authentication providers does NextAuth.js support?',
+            answers: ['Only OAuth', 'Only JWT', 'Multiple providers', 'Only Firebase'],
+            correctAnswer: 'Multiple providers',
         },
         {
             id: 20,
-            question: 'What does ISR (Incremental Static Regeneration) in Next.js enable you to do?',
-            answers: [
-                'Fetch data at runtime on every request.',
-                'Automatically refresh static pages at a specified interval without rebuilding the entire site.',
-                'Perform client-side routing.',
-                'Use server-side APIs to fetch data.'
-            ],
-            correctAnswer: 'Automatically refresh static pages at a specified interval without rebuilding the entire site.'
-        }
+            question: 'How does NextAuth.js store session data?',
+            answers: ['Local Storage', 'Cookies', 'Redux', 'Session Storage'],
+            correctAnswer: 'Cookies',
+        },
+        {
+            id: 21,
+            question: 'How do you restrict API access in Next.js?',
+            answers: ['Using NextAuth.js', 'Using middleware', 'Inside next.config.js', 'With getServerSideProps'],
+            correctAnswer: 'Using middleware',
+        },
+        {
+            id: 22,
+            question: 'Which HTTP method is commonly used for fetching data in API routes?',
+            answers: ['POST', 'GET', 'DELETE', 'PATCH'],
+            correctAnswer: 'GET',
+        },
+        {
+            id: 23,
+            question: 'CSS Modules are useful for…',
+            answers: ['Global styles', 'Component-scoped styles', 'Server-side rendering', 'API calls'],
+            correctAnswer: 'Component-scoped styles',
+        },
+        {
+            id: 24,
+            question: 'What does Tailwind CSS use for styling?',
+            answers: ['Component classes', 'Utility classes', 'Inline styles', 'Theme files'],
+            correctAnswer: 'Utility classes',
+        },
+        {
+            id: 25,
+            question: 'Why use next/head?', 
+            answers: ['To manage metadata', 'To optimize CSS', 'To fetch data', 'To store cookies'],
+            correctAnswer: 'To manage metadata',
+        },
+        {
+            id: 26,
+            question: 'Which tag is not typically included inside <Head>?',
+            answers: ['<title>', '<meta>', '<script>', '<body>'],
+            correctAnswer: '<body>',
+        },
+        {
+            id: 27,
+            question: 'Which service provides automatic deployments for Next.js?',
+            answers: ['Firebase', 'Vercel', 'AWS S3', 'Cloudflare'],
+            correctAnswer: 'Vercel',
+        },
+        {
+            id: 28,
+            question: 'What file is used to configure a Vercel deployment?',
+            answers: ['vercel.json', 'next.config.js', 'package.json', 'config.json'],
+            correctAnswer: 'vercel.json',
+        },
+        {
+            id: 29,
+            question: 'What is required to enable internationalization (i18n) in Next.js?',
+            answers: ['A separate i18n.json file', 'Adding i18n settings inside next.config.js', 'Installing a third-party library', 'Using environment variables'],
+            correctAnswer: 'Adding i18n settings inside next.config.js',
+        },
+        {
+            id: 30,
+            question: 'What is the default locale used when internationalization is enabled?',
+            answers: ['The first locale in the locales array', 'English (en)', 'The browser’s preferred language', 'Defined in package.json'],
+            correctAnswer: 'The first locale in the locales array',
+        },
+        {
+            id: 31,
+            question: 'Which method is best for client-side form validation in Next.js?',
+            answers: ['Using useState', 'Using react-hook-form', 'Fetching data on form submit', 'Using Redux'],
+            correctAnswer: 'Using react-hook-form',
+        },
+        {
+            id: 32,
+            question: 'How can you prevent a form from being submitted if validation fails?',
+            answers: ['Using preventDefault()', 'Calling fetch()', 'Redirecting to another page', 'Using useEffect'],
+            correctAnswer: 'Using preventDefault()',
+        },
+        {
+            id: 33,
+            question: 'Where should environment variables be stored in a Next.js project?',
+            answers: ['Inside env.js', 'Inside .env.local', 'Inside next.config.js', 'Inside public/env.json'],
+            correctAnswer: 'Inside .env.local',
+        },
+        {
+            id: 34,
+            question: 'How do you access a public environment variable in Next.js?',
+            answers: ['process.env.VAR_NAME', 'NEXT_PUBLIC_VAR_NAME', 'window.env.VAR_NAME', 'config.env.VAR_NAME'],
+            correctAnswer: 'NEXT_PUBLIC_VAR_NAME',
+        },
+        {
+            id: 35,
+            question: 'What caching technique does Next.js use for optimized performance?',
+            answers: ['Browser cache', 'Static site generation (SSG)', 'LocalStorage', 'API Gateway'],
+            correctAnswer: 'Static site generation (SSG)',
+        },
+        {
+            id: 36,
+            question: 'What is the benefit of caching API responses?',
+            answers: ['Reduces database load', 'Increases response time', 'Requires more server resources', 'Prevents client-side data fetching'],
+            correctAnswer: 'Reduces database load',
+        },
+        {
+            id: 37,
+            question: 'What is the main benefit of using Zustand over Redux?',
+            answers: ['It uses fewer boilerplate configurations', 'It requires more setup', 'It only works with class components', 'It does not support middleware'],
+            correctAnswer: 'It uses fewer boilerplate configurations',
+        },
+        {
+            id: 38,
+            question: 'What is Context API best suited for?',
+            answers: ['Global state management', 'Fetching API data', 'Routing pages', 'Image optimization'],
+            correctAnswer: 'Global state management',
+        },
+        {
+            id: 39,
+            question: 'Which method is commonly used to fetch REST API data in Next.js?',
+            answers: ['fetch()', 'fs.readFileSync()', 'useContext', 'getStaticProps only'],
+            correctAnswer: 'fetch()',
+        },
+        {
+            id: 40,
+            question: 'What does Apollo Client help with in Next.js?',
+            answers: ['Managing GraphQL requests', 'Fetching REST APIs', 'Handling authentication', 'Styling components'],
+            correctAnswer: 'Managing GraphQL requests',
+        },
     ] as {
         id: number;
         question: string;
